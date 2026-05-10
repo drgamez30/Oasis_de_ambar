@@ -1,0 +1,295 @@
+/* animations.css */
+
+/* =========================================
+PRELOADER PREMIUM
+========================================= */
+
+#loader{
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background:
+    radial-gradient(circle at center, #1a1a1a 0%, #0b0b0b 70%);
+
+    top: 0;
+    left: 0;
+
+    z-index: 99999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    transition:
+    opacity 1.2s ease,
+    visibility 1.2s ease;
+}
+
+/* =========================================
+EFECTOS DE FONDO
+========================================= */
+
+#loader::before,
+#loader::after{
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(200,169,107,0.05);
+
+    filter: blur(90px);
+
+    animation: floating 8s ease-in-out infinite;
+}
+
+#loader::before{
+    top: -150px;
+    left: -120px;
+}
+
+#loader::after{
+    bottom: -150px;
+    right: -120px;
+
+    animation-delay: 4s;
+}
+
+/* =========================================
+CONTENIDO
+========================================= */
+
+.loader-content{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+LOGO
+========================================= */
+
+.loader-logo{
+    font-size: 4rem;
+
+    color: #c8a96b;
+
+    font-family: 'Playfair Display', serif;
+
+    margin-bottom: 55px;
+
+    letter-spacing: 5px;
+
+    position: relative;
+
+    animation: logoFade 2s ease;
+}
+
+/* Línea elegante */
+
+.loader-logo::after{
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    bottom: -18px;
+
+    width: 140px;
+    height: 2px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #c8a96b,
+        transparent
+    );
+}
+
+/* =========================================
+CÍRCULO PRINCIPAL
+========================================= */
+
+.loader-circle{
+    width: 120px;
+    height: 120px;
+
+    margin: auto;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ARO SUAVE */
+
+.loader-circle::before{
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ARO GIRATORIO */
+
+.loader-circle span{
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    border: 2px solid transparent;
+
+    border-top: 2px solid #c8a96b;
+    border-right: 2px solid rgba(200,169,107,0.4);
+
+    animation: spin 1.4s linear infinite;
+}
+
+/* CÍRCULO INTERNO */
+
+.inner-circle{
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background:
+    radial-gradient(circle, rgba(200,169,107,0.25), transparent);
+
+    animation: pulseGlow 2s infinite;
+}
+
+/* =========================================
+TEXTO
+========================================= */
+
+.loader-text{
+    color: #aaaaaa;
+
+    margin-top: 35px;
+
+    font-size: 0.95rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    animation: pulseText 2.5s infinite;
+}
+
+/* =========================================
+ANIMACIONES
+========================================= */
+
+@keyframes spin{
+
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50%{
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+}
+
+@keyframes pulseText{
+
+    0%{
+        opacity: 0.4;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0.4;
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(30px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes logoFade{
+
+    from{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* =========================================
+PRELOADER HIDE
+========================================= */
+
+#loader{
+    transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
+}
+
+.loader-hidden{
+    opacity: 0;
+
+    visibility: hidden;
+}

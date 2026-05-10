@@ -1,0 +1,281 @@
+/* responsive.css */
+
+/* =========================================
+TABLETS
+========================================= */
+
+@media(max-width: 900px){
+
+    .hero h1{
+        font-size: 4rem;
+    }
+
+}
+
+/* =========================================
+MOBILE PREMIUM
+========================================= */
+
+@media(max-width: 700px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* =========================================
+    HEADER
+    ========================================= */
+
+    header{
+        padding: 16px 5%;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .logo{
+        font-size: 1.5rem;
+
+        text-align: center;
+    }
+
+    nav{
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 16px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a{
+        font-size: 0.82rem;
+    }
+
+    /* =========================================
+    HERO MOBILE PREMIUM
+    ========================================= */
+
+    .hero{
+        height: 78vh;
+
+        padding: 130px 7% 40px;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        text-align: center;
+
+        background:
+        linear-gradient(
+            rgba(0,0,0,0.18),
+            rgba(0,0,0,0.40)
+        ),
+        url('../img/banner-mobile.jpg');
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        position: relative;
+    }
+
+    /* CONTENIDO */
+
+    .hero-content{
+        width: 100%;
+
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        height: 100%;
+
+        padding-top: 10px;
+    }
+
+    /* TÍTULO */
+
+    .hero h1{
+        font-size: 2.4rem;
+
+        line-height: 0.92;
+
+        margin-bottom: 320px;
+
+        max-width: 240px;
+
+        text-align: center;
+
+        text-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    }
+
+    /* OCULTAR TEXTO */
+
+    .hero p{
+        display: none;
+    }
+
+    /* BOTÓN */
+
+    .hero button{
+        padding: 13px 28px;
+
+        font-size: 0.8rem;
+
+        width: auto;
+
+        background: rgba(200,169,107,0.10);
+
+        border: 1px solid #c8a96b;
+
+        backdrop-filter: blur(5px);
+    }
+
+    /* =========================================
+    CATEGORÍAS
+    ========================================= */
+
+    .categorias{
+        padding: 75px 5%;
+    }
+
+    .categorias h2{
+        font-size: 2.3rem;
+
+        margin-bottom: 35px;
+    }
+
+    .categorias-container{
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .categoria-card{
+        height: 130px;
+    }
+
+    /* =========================================
+    PRODUCTOS
+    ========================================= */
+
+    .productos{
+        padding: 75px 5%;
+    }
+
+    .productos h2{
+        font-size: 2.3rem;
+
+        margin-bottom: 35px;
+    }
+
+    .productos-container{
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .producto-card{
+        padding: 18px;
+    }
+
+    .producto-img{
+        height: 240px;
+    }
+
+    .producto-card button{
+        width: 100%;
+    }
+
+    /* =========================================
+    PREMIUM BANNER
+    ========================================= */
+
+    .premium-banner{
+        padding: 80px 5%;
+    }
+
+    .premium-banner h2{
+        font-size: 2.1rem;
+
+        line-height: 1.2;
+    }
+
+    /* =========================================
+    FOOTER
+    ========================================= */
+
+    footer{
+        padding: 25px 5%;
+    }
+
+    footer p{
+        font-size: 0.85rem;
+
+        line-height: 1.6;
+    }
+
+    /* =========================================
+    WHATSAPP
+    ========================================= */
+
+    .whatsapp-float{
+        width: 56px;
+        height: 56px;
+
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .whatsapp-float img{
+        width: 28px;
+        height: 28px;
+    }
+
+}
+
+/* =========================================
+SMALL MOBILE
+========================================= */
+
+@media(max-width: 480px){
+
+    .hero{
+        height: 72vh;
+
+        padding-top: 125px;
+    }
+
+    .hero h1{
+        font-size: 2.2rem;
+
+        max-width: 210px;
+    }
+
+    nav{
+        gap: 12px;
+    }
+
+    nav a{
+        font-size: 0.74rem;
+    }
+
+    .categorias h2,
+    .productos h2{
+        font-size: 2rem;
+    }
+
+    .premium-banner h2{
+        font-size: 1.9rem;
+    }
+
+}

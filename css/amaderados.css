@@ -1,0 +1,347 @@
+/* =========================================
+RESET
+========================================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================================
+BODY
+========================================= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    background: #f4efe8;
+
+    color: #1a1a1a;
+
+    overflow-x: hidden;
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+header{
+    width: 100%;
+
+    padding: 22px 8%;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+    rgba(244,239,232,0.90);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom:
+    1px solid rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+
+.logo{
+    font-size: 2rem;
+
+    font-family: 'Playfair Display', serif;
+
+    color: #2d1b12;
+
+    font-weight: 700;
+}
+
+/* NAV */
+
+nav{
+    display: flex;
+
+    gap: 30px;
+}
+
+nav a{
+    text-decoration: none;
+
+    color: #2d1b12;
+
+    font-size: 0.92rem;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover{
+    color: #9c6b3d;
+}
+
+/* ACTIVE */
+
+nav a.active{
+    color: #9c6b3d;
+
+    font-weight: 600;
+}
+
+/* =========================================
+TOP SECTION
+========================================= */
+
+.top-section{
+    padding:
+    150px 8% 60px;
+
+    text-align: center;
+}
+
+.top-section span{
+    color: #9c6b3d;
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-size: 0.8rem;
+}
+
+.top-section h1{
+    font-size: 4rem;
+
+    margin:
+    18px 0 12px;
+
+    color: #2d1b12;
+
+    font-family: 'Playfair Display', serif;
+}
+
+.top-section p{
+    color:
+    rgba(0,0,0,0.65);
+
+    font-size: 1rem;
+}
+
+/* =========================================
+PRODUCTOS
+========================================= */
+
+.productos{
+    padding:
+    0 8% 110px;
+}
+
+/* GRID */
+
+.productos-container{
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 28px;
+}
+
+/* CARD */
+
+.producto-card{
+    background: white;
+
+    border-radius: 26px;
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+
+    box-shadow:
+    0 12px 30px rgba(0,0,0,0.06);
+}
+
+.producto-card:hover{
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+
+.producto-img{
+    height: 340px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* PRODUCTOS */
+
+.producto1{
+    background-image:
+    url('../img/producto1.jpg');
+}
+
+.producto2{
+    background-image:
+    url('../img/producto2.jpg');
+}
+
+.producto3{
+    background-image:
+    url('../img/producto3.jpg');
+}
+
+/* INFO */
+
+.producto-info{
+    padding: 24px;
+}
+
+/* TITLE */
+
+.producto-info h3{
+    font-size: 1.8rem;
+
+    margin-bottom: 10px;
+
+    color: #2d1b12;
+
+    font-family: 'Playfair Display', serif;
+}
+
+/* TEXT */
+
+.producto-info p{
+    color:
+    rgba(0,0,0,0.65);
+
+    line-height: 1.7;
+
+    margin-bottom: 22px;
+}
+
+/* BUTTON */
+
+.producto-info button{
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2d1b12;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.producto-info button:hover{
+    background: #9c6b3d;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width: 700px){
+
+    header{
+        flex-direction: column;
+
+        gap: 14px;
+
+        padding: 18px 5%;
+    }
+
+    nav{
+        gap: 16px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .top-section{
+        padding:
+        145px 5% 45px;
+    }
+
+    .top-section h1{
+        font-size: 2.7rem;
+    }
+
+    .productos{
+        padding:
+        0 5% 80px;
+    }
+
+    /* MÁS PRODUCTOS VISIBLES */
+
+    .productos-container{
+        grid-template-columns:
+        repeat(2,1fr);
+
+        gap: 16px;
+    }
+
+    .producto-img{
+        height: 180px;
+    }
+
+    .producto-info{
+        padding: 14px;
+    }
+
+    .producto-info h3{
+        font-size: 1.1rem;
+    }
+
+    .producto-info p{
+        font-size: 0.82rem;
+
+        line-height: 1.5;
+
+        margin-bottom: 14px;
+    }
+
+    .producto-info button{
+        padding: 11px;
+
+        font-size: 0.8rem;
+    }
+
+}
+
+@media(max-width: 480px){
+
+    .top-section h1{
+        font-size: 2.3rem;
+    }
+
+    .productos-container{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .producto-img{
+        height: 150px;
+    }
+
+}
