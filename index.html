@@ -24,6 +24,8 @@
 
     <link rel="stylesheet" href="css/responsive.css">
 
+    <link rel="stylesheet" href="css/ui.css">
+
     <link rel="stylesheet" href="css/animations.css">
 
 </head>
@@ -64,9 +66,15 @@
 
     <header>
 
-        <div class="logo">
+        <a href="index.html" class="logo">
             Oasis de Ámbar
-        </div>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
         <nav>
 
@@ -321,7 +329,13 @@
 
     </a>
 
+    <button class="back-to-top" type="button" aria-label="Volver arriba">
+        ↑
+    </button>
+
     <!-- JS -->
+
+    <script src="js/site-ui.js"></script>
 
     <script src="js/main.js"></script>
 

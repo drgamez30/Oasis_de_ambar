@@ -3,18 +3,18 @@ RESET
 ========================================= */
 
 :root{
-    --page-bg: #f1e3d0;
-    --header-bg: rgba(249,239,226,0.94);
-    --card-bg: #fff7ed;
-    --text: #2b2119;
-    --title: #5b3926;
-    --muted: rgba(43,33,25,0.66);
-    --accent: #c9855b;
-    --button-bg: #7a5138;
-    --button-text: #fffdf8;
-    --border: rgba(122,81,56,0.16);
-    --shadow: rgba(111,70,43,0.1);
-    --shadow-strong: rgba(111,70,43,0.18);
+    --page-bg: #fbfae8;
+    --header-bg: rgba(255,253,238,0.92);
+    --card-bg: #fffff7;
+    --text: #25271f;
+    --title: #4f5734;
+    --muted: rgba(37,39,31,0.62);
+    --accent: #c7b95b;
+    --button-bg: #6f7445;
+    --button-text: #fffff7;
+    --border: rgba(111,116,69,0.12);
+    --shadow: rgba(111,116,69,0.08);
+    --shadow-strong: rgba(111,116,69,0.14);
 }
 
 *{
@@ -267,17 +267,22 @@ PRODUCTOS
 
 .producto1{
     background-image:
-    url('../img/amaderados.jpg');
+    url('../img/citricas.png');
 }
 
 .producto2{
     background-image:
-    url('../img/amaderados.jpg');
+    url('../img/citricas.png');
 }
 
 .producto3{
     background-image:
-    url('../img/amaderados.jpg');
+    url('../img/citricas.png');
+}
+
+.producto4{
+    background-image:
+    url('../img/citricas.png');
 }
 
 /* INFO */

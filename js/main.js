@@ -6,6 +6,20 @@ window.addEventListener("load", () => {
 
     const loader = document.getElementById("loader");
 
+    if(!loader){
+        return;
+    }
+
+    if(sessionStorage.getItem("oasisLoaderSeen") === "true"){
+
+        loader.style.display = "none";
+
+        return;
+
+    }
+
+    sessionStorage.setItem("oasisLoaderSeen", "true");
+
     setTimeout(() => {
 
         loader.classList.add("loader-hidden");

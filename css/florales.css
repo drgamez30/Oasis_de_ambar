@@ -3,18 +3,18 @@ RESET
 ========================================= */
 
 :root{
-    --page-bg: #f1e3d0;
-    --header-bg: rgba(249,239,226,0.94);
-    --card-bg: #fff7ed;
-    --text: #2b2119;
-    --title: #5b3926;
-    --muted: rgba(43,33,25,0.66);
-    --accent: #c9855b;
-    --button-bg: #7a5138;
-    --button-text: #fffdf8;
-    --border: rgba(122,81,56,0.16);
-    --shadow: rgba(111,70,43,0.1);
-    --shadow-strong: rgba(111,70,43,0.18);
+    --page-bg: #faf3fb;
+    --header-bg: rgba(253,248,254,0.92);
+    --card-bg: #fffaff;
+    --text: #29242d;
+    --title: #574765;
+    --muted: rgba(41,36,45,0.62);
+    --accent: #bf9ad5;
+    --button-bg: #756283;
+    --button-text: #fffaff;
+    --border: rgba(117,98,131,0.12);
+    --shadow: rgba(117,98,131,0.08);
+    --shadow-strong: rgba(117,98,131,0.14);
 }
 
 *{
@@ -267,17 +267,22 @@ PRODUCTOS
 
 .producto1{
     background-image:
-    url('../img/amaderados.jpg');
+    url('../img/florales.png');
 }
 
 .producto2{
     background-image:
-    url('../img/amaderados.jpg');
+    url('../img/florales.png');
 }
 
 .producto3{
     background-image:
-    url('../img/amaderados.jpg');
+    url('../img/florales.png');
+}
+
+.producto4{
+    background-image:
+    url('../img/florales.png');
 }
 
 /* INFO */
